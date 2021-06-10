@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+
+.card-container {
+  margin-right: -50px;
+}
+
+.job {
+  &-body {
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  &-detail {
+    font-family: 'Roboto', 'Poppins', sans-serif;
+    color: $chambray-blue2;
+  }
+
+  &-company {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  &-title {
+    margin-top: 16px;
+    font-size: 18px;
+  }
+
+  &-labels {
+    margin-top: 12px;
+
+    .label {
+      display: inline-block;
+      border: 1px solid $chambray-blue2;
+      border-radius: 4px;
+      padding: 6px 8px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  &-sub-detail {
+    font: 500 12px 'Roboto', sans-serif;
+    color: $light-gray3;
+    margin-top: 16px;
+    font-size: 12px;
+  }
+}
+
+.pagination-container {
+  text-align: right;
+}

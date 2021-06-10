@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+
+.apply {
+  &-back a {
+    text-decoration: none;
+  }
+
+  &-title {
+    font: 700 14px 'Poppins', sans-serif;
+    color: $light-gray3;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+
+  &-detail {
+    font: 500 14px 'Poppins', sans-serif;
+    color: $chambray-blue2;
+    line-height: 21px;
+  }
+}
+
+.job-detail {
+  &-title {
+    font: 700 24px 'Roboto', sans-serif;
+    color: $chambray-blue2;
+    line-height: 28px;
+  }
+
+  &-time {
+    font: 500 12px 'Roboto', sans-serif;
+    color: $very-light-gray3;
+    line-height: 14px;
+  }
+
+  &-grid {
+    display: flex;
+  }
+
+  &-company {
+    font: 700 18px 'Roboto', sans-serif;
+    color: $chambray-blue2;
+    line-height: 21px;
+  }
+
+  &-location {
+    font: 500 12px 'Roboto', sans-serif;
+    color: $light-gray3;
+    line-height: 14px;
+  }
+
+  &-description {
+    font: 500 16px 'Roboto', sans-serif;
+    color: $chambray-blue2;
+    line-height: 150%;
+  }
+}

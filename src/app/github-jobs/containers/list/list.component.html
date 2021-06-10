@@ -1,0 +1,53 @@
+<div class="card-container">
+  <div class="text-center">
+    <h3 *ngIf="state === STATE.LOADING">
+      <i class="fa fa-spinner fa-spin"></i>
+    </h3>
+    <p class="text-danger" *ngIf="state === STATE.ERROR">
+      Unable to fetch job details at the moment. Please try again later.
+    </p>
+    <div *ngIf="state === STATE.EMPTY">
+      <h3 class="text-danger">No jobs found.</h3>
+    </div>
+  </div>
+
+  <div class="card mb-3 shadow-sm job" [routerLink]="['/details', job.id]"
+       *ngFor="let job of jobsList | paginate: { itemsPerPage: 5, currentPage: pageIndex }">
+    <div class="card-body job-body">
+      <div class="row">
+        <div class="col-4 col-md-2">
+          <img *ngIf="job.company_logo" class="img-fluid" src="{{ job.company_logo }}" />
+          <div *ngIf="!job.company_logo" class="img-placeholder">not found</div>
+        </div>
+        <div class="col-8 col-md-6 job__detail">
+          <div class="job-company">{{ job.company }}</div>
+          <div class="job-title">{{ job.title }}</div>
+          <div class="job-labels">
+            <span class="label" *ngIf="job.type === 'Full Time'">Full time</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 text-end d-flex flex-column justify-content-end">
+          <div class="job-sub-detail">
+            <span class="job-location me-4">
+              <i class="fa fa-globe"></i>&nbsp; {{ job.location }}
+            </span>
+            <span class="job-time">
+              <i class="fa fa-clock-o"></i>&nbsp; {{ job.created_at | daysAgo }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pagination-container">
+  <pagination-controls
+    (pageChange)="pageIndex = $event"
+    [responsive]="true"
+    [autoHide]="true"
+    [maxSize]="5"
+    [previousLabel]="''"
+    [nextLabel]="''">
+  </pagination-controls>
+</div>

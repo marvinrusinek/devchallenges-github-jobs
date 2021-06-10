@@ -1,0 +1,50 @@
+@import "src/app/github-jobs/styles/variables";
+
+:root {
+  --dark-blue: $chambray-blue2;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bg-grey {
+  background-color: $ghost-white;
+}
+
+/* common utils */
+.img-placeholder {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-smoke;
+  color: $silver;
+  font: 12px 'Roboto';
+}
+
+/* input border-less with-icon */
+.input-no-border input,
+.input-no-border .input-group-text {
+  border: 0;
+}
+
+.input-with-icon .input-group-text {
+  padding-right: 1px;
+  background: $white;
+  color: $light-gray3;
+}
+
+.input-with-icon input {
+  border-left: 0;
+}
+
+.input-with-icon .form-control:focus {
+  box-shadow: none;
+}
+
+.input-with-icon .fa {
+  line-height: 1.5;
+}

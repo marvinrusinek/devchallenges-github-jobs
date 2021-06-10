@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+
+.search {
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 16px;
+  background: url('../../../../assets/images/backgroundImg.png') center no-repeat;
+
+  .search-box {
+    display: flex;
+    background-color: $white;
+  }
+}
+
+.search-box-input {
+  flex-grow: 1;
+}

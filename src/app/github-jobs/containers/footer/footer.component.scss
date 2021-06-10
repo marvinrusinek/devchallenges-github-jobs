@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+footer {
+  margin-top: 150px;
+  margin-bottom: 24px;
+
+  h6 {
+    font: 700 14px "Montserrat", sans-serif;
+    color: $light-gray;
+    margin: 0 auto;
+    margin-top: -40px;
+    width: 350px;
+
+    a {
+      color: $light-gray;
+      text-decoration: none;
+
+      &:hover {
+        color: $turquoise;
+      }
+    }
+  }
+}
